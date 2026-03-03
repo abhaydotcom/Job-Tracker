@@ -12,8 +12,9 @@ import {
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import SignOut from "./sign-out";
 
+
 const Navbar = () => {
-  const { data: session } = useSession();
+  const {data:session}  = useSession() 
 
   return (
     <nav className="border-b border-gray-200 bg-white ">
