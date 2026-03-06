@@ -86,7 +86,7 @@ const JobApplicationSchema = new Schema<IJobApplication>(
 );
 
 export const JobApplication =
-  mongoose.models.JobApplication ||
+  (mongoose.models.JobApplication as mongoose.Model<IJobApplication>) ||
   mongoose.model<IJobApplication>("JobApplication", JobApplicationSchema);
 
 
