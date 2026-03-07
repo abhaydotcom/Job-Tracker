@@ -125,7 +125,7 @@ function ColumnCard({
           </div>
         </div>
 
-        {/* Cards Body */}
+      
         <div className="flex-1 px-3 py-3 space-y-2.5 bg-gray-50/40 overflow-y-auto">
           {sortedJobs.length === 0 && (
             <div className="flex flex-col items-center justify-center h-32 opacity-40 select-none">
@@ -221,7 +221,7 @@ function MobileNavArrows({
         Prev
       </button>
 
-      {/* Dot progress indicators */}
+  
       <div className="flex items-center gap-1.5">
         {Array.from({ length: total }).map((_, i) => {
           const c = COLUMN_CONFIG[i] || COLUMN_CONFIG[0]
@@ -267,7 +267,6 @@ function KanbanHeader({ board }: { board: Board }) {
         </div>
       </div>
 
-      {/* Stage dots — hidden on small screens */}
       <div className="hidden sm:flex items-center gap-1.5 flex-shrink-0 ml-4">
         {COLUMN_CONFIG.map((cfg, i) => (
           <div
@@ -281,7 +280,7 @@ function KanbanHeader({ board }: { board: Board }) {
   )
 }
 
-/* ─── Root ────────────────────────────────────────────────── */
+
 function Kaban({ board, userId }: KabanProps) {
   const [activeCol, setActiveCol] = useState(0)
 
@@ -299,7 +298,7 @@ function Kaban({ board, userId }: KabanProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 font-sans">
-      {/* Decorative blobs */}
+
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-200 rounded-full opacity-20 blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-200 rounded-full opacity-20 blur-3xl" />
@@ -309,7 +308,7 @@ function Kaban({ board, userId }: KabanProps) {
       <div className="max-w-[1600px] mx-auto px-3 sm:px-6 pt-5 sm:pt-6 pb-8">
         <KanbanHeader board={board} />
 
-        {/* ── MOBILE view (< md): one column at a time with tab navigation ── */}
+       
         <div className="md:hidden flex flex-col gap-3">
           <MobileTabBar
             columns={sortedColumns}
@@ -337,7 +336,6 @@ function Kaban({ board, userId }: KabanProps) {
           />
         </div>
 
-        {/* ── DESKTOP view (≥ md): horizontal scrolling columns ── */}
         <div className="hidden md:block w-full overflow-x-auto pb-6 -mx-1 px-1">
           <div className="flex gap-4 min-w-max items-start">
             {sortedColumns.map((col, key) => (
@@ -355,14 +353,6 @@ function Kaban({ board, userId }: KabanProps) {
                 />
               </div>
             ))}
-
-            {/* Add column placeholder */}
-            <div className="w-[260px] flex-shrink-0 pt-1.5">
-              <button className="w-full h-14 rounded-2xl border-2 border-dashed border-gray-200 text-gray-400 text-sm font-semibold hover:border-violet-300 hover:text-violet-400 hover:bg-violet-50/50 transition-all duration-200 flex items-center justify-center gap-2 group">
-                <Plus className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                Add Column
-              </button>
-            </div>
           </div>
         </div>
       </div>
