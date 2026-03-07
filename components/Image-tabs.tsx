@@ -29,21 +29,21 @@ function ImageTabs() {
               <div className="border overflow-hidden relative mx-auto max-w-5xl rounded-lg border-gray-200 shadow-xl ">
                { active=="organize"&&(
                 <Image
-                src="/hero-image/hero1.png"
+                src="/hero-image/HomePage.jpg"
                 alt="Organize application"
                 width={1200}
                 height={800}
                 />)}
 
                   { active=="hired"&&(<Image
-                src="/hero-image/hero2.png"
+                src="/hero-image/DashboardPage.jpg"
                 alt="Get hired"
                 width={1200}
                 height={800}
                 />)}
 
                  { active=="boards"&&(<Image
-                src="/hero-image/hero3.png"
+                src="/hero-image/FormPage.jpg"
                 alt="Manage Boards"
                 width={1200}
                 height={800}
