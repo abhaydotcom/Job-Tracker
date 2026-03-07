@@ -4,11 +4,12 @@ import { connectDB } from "@/lib/db";
 import { Board } from "@/lib/Models/boards";
 import { redirect } from "next/navigation";
 import "@/lib/Models/job-application";
+import { Suspense } from "react";
 
 
 
 async function getBoard(userId:string){
-
+  "use cache"
 
   await connectDB();
 
@@ -31,7 +32,9 @@ async function getBoard(userId:string){
 
 }
 
-async function Dashboard() {
+
+
+async function DashboardPage(){
   const session=await getSession();
   const board=await getBoard(session?.user.id ?? "")
     if(!session?.user){
@@ -49,6 +52,21 @@ async function Dashboard() {
         <Kaban  board={board} userId={session?.user.id} />
       </div>
     </div>
+  )
+}
+
+
+
+
+
+
+
+
+async function Dashboard() {
+  return(
+    <Suspense fallback={<p>Loading...</p>}>
+      <DashboardPage />
+    </Suspense>
   )
 }
 
