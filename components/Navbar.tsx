@@ -21,9 +21,9 @@ const Navbar = () => {
       <div className="container  h-16 mx-auto px-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl text-primary font-semibold"
+          className="flex items-center gap-2 text-[16px]   lg:text-xl text-primary font-semibold"
         >
-          <Briefcase />
+          <Briefcase className=" " />
           Job Tracker
         </Link>
 
