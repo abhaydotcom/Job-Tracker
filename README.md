@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Application Tracker
 
-## Getting Started
+A modern **Job Application Tracker** built with **Next.js** that helps users organize and manage their job search efficiently using a Kanban-style board.
 
-First, run the development server:
+Users can create an account, add job applications, and track them across different stages of the hiring process.
+
+---
+
+## 🚀 Features
+
+- 🔐 User Authentication (Sign up / Login)
+- 📋 Kanban-style job tracking board
+- ➕ Add new job applications
+- 🔄 Move applications between columns
+- 📊 Track progress of job applications
+- 🎨 Clean and modern UI
+
+---
+
+## 📌 Application Stages
+
+Jobs can be organized into the following columns:
+
+- ⭐ Wishlist
+- 📤 Applied
+- 🎤 Interviewing
+- 🏆 Offer
+- ❌ Rejected
+
+Users can easily move job applications between these stages as their application progresses.
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **MongoDB** *(if you used it)*
+- **Authentication** *(NextAuth / custom auth depending on your implementation)*
+
+---
+
+
+
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/abhaydotcom/Job-Tracker
+
+cd job-tracker
+
+.env.local
+MONGODB_URI=
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=
+NEXT_PUBLIC_BETTER_AUTH_URL=
+
+
+
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
