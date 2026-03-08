@@ -37,9 +37,8 @@ Users can easily move job applications between these stages as their application
 - **React**
 - **TypeScript**
 - **Tailwind CSS**
-- **MongoDB** *(if you used it)*
-- **Authentication** *(NextAuth / custom auth depending on your implementation)*
-
+- **MongoDB** 
+- **Authentication  Better-auth** 
 ---
 
 
@@ -54,7 +53,6 @@ Clone the repository:
 ```bash
 git clone https://github.com/abhaydotcom/Job-Tracker
 
-cd job-tracker
 
 .env.local
 MONGODB_URI=
